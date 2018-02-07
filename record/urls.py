@@ -21,4 +21,6 @@ from recordapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^index/$',views.index),
+    url(r'^new/$',views.new),
+    url(r'^$',views.index),
 ]
