@@ -6,7 +6,7 @@ paytypes=('現金', '悠遊卡', '信用卡')
 
 class Postform(forms.Form):
     # flow = forms.CharField(max_length=5, initial='out')
-    flow = forms.CharField(widget=forms.RadioSelect)
+    flow = forms.CharField(widget=forms.RadioSelect, label="入/出")
     item = forms.CharField(max_length=20, initial='')
     amount = forms.IntegerField()
     paytype = forms.CharField(max_length=10, required=False, initial='現金')

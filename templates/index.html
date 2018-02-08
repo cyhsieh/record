@@ -32,11 +32,17 @@
         <th>付款方式 </th>
         <th>備註</th>
     </tr>
-
+    {% for record in records %}
+    <tr><td>{{record.flow}}</td>
+    <td>{{record.item}}</td>
+    <td>{{record.amount}}</td>
+    <td>{{record.paytype}}</td>
+    <td>{{record.description}}</td></tr>
+    {% endfor %}
     <!--<tr>
         td
     </tr> -->
-    {{ postform }}
+    <!--  {{ postform }} -->
 
 </table>   
 {% endblock %}
